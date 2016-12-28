@@ -20,11 +20,17 @@ import java.util.List;
 @Controller
 public class BlogController {
 
-    @Autowired
+    private final
     BlogRepository blogRepository;
 
-    @Autowired
+    private final
     UserRepository userRepository;
+
+    @Autowired
+    public BlogController(BlogRepository blogRepository, UserRepository userRepository) {
+        this.blogRepository = blogRepository;
+        this.userRepository = userRepository;
+    }
 
     // 查看所有博文
     @RequestMapping(value = "/admin/blogs", method = RequestMethod.GET)

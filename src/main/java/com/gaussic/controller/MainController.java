@@ -19,8 +19,13 @@ import java.util.List;
 public class MainController {
 
     // 自动装配数据库接口，不需要再写原始的Connection来操作数据库
-    @Autowired
+    private final
     UserRepository userRepository;
+
+    @Autowired
+    public MainController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
