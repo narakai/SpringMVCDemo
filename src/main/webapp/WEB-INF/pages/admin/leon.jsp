@@ -29,7 +29,7 @@
     <!-- 如果用户列表为空 -->
     <c:if test="${empty user}">
         <div class="alert alert-warning" role="alert">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>找不到先关人士
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>找不到相关人士
         </div>
     </c:if>
 
