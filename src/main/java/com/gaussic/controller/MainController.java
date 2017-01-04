@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by dzkan on 2016/3/8.
@@ -42,6 +43,17 @@ public class MainController {
 
         // 返回pages目录下的admin/users.jsp页面
         return "admin/users";
+    }
+
+    @RequestMapping(value = "/admin/showRandom", method = RequestMethod.GET)
+    public String getLeon(ModelMap modelMap) {
+        // 找到random userId所表示的用户
+        int randomId = new Random().nextInt(10);
+        UserEntity userEntity = userRepository.findOne(randomId);
+
+        // 传递给请求页面
+        modelMap.addAttribute("user", userEntity);
+        return "admin/leon";
     }
 
     // get请求，访问添加用户 页面
