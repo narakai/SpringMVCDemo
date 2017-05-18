@@ -23,6 +23,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
+          <factory-entry name="Entities" />
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="defaultPersistenceUnit" value="43fab695-23db-428e-a4a9-bb3ecc6cb8de" />
           <factory-entry name="noname-a.xml@0" value="87866f9b-90c5-4a5a-8d9b-1ac31c5993a2" />
@@ -39,8 +40,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Jersey-2.2" level="project" />
+    <orderEntry type="library" name="javax.json.processing-1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.6.RELEASE" level="project" />
@@ -75,7 +78,5 @@
     <orderEntry type="library" name="Maven: com.mchange:mchange-commons-java:0.2.11" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />
-    <orderEntry type="library" name="Jersey-2.2" level="project" />
-    <orderEntry type="library" name="javax.json.processing-1.0" level="project" />
   </component>
 </module>
